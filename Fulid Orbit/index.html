@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ENUID Labs</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Space Mono", monospace;
+        background: white;
+        color: black;
+        padding: 40px;
+        line-height: 1.6;
+        font-size: 16px;
+      }
+      .logo {
+        display: none; /* Hidden from main page */
+      }
+      .subtitle {
+        font-size: 14px;
+        color: #333;
+        margin-top: -10px;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .highlight {
+        color: #007bff;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        border: 3px solid black;
+        border-radius: 24px;
+        padding: 40px;
+        max-width: 600px;
+        width: 90%;
+        z-index: 1000;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      }
+      .popup .logo {
+        display: block;
+        text-align: left;
+      }
+      .popup .logo img {
+        width: 60px;
+        vertical-align: middle;
+      }
+      .popup h1 {
+        display: inline-block;
+        font-size: 28px;
+        margin-left: 10px;
+        vertical-align: middle;
+      }
+      .popup h2 {
+        font-size: 26px;
+        margin-top: 30px;
+      }
+      .popup ul {
+        padding-left: 20px;
+      }
+      .popup input[type="email"] {
+        padding: 12px;
+        width: 60%;
+        font-family: "Space Mono", monospace;
+        font-size: 16px;
+        border: 1px solid black;
+        border-radius: 12px;
+        margin-top: 10px;
+      }
+      .popup button {
+        padding: 12px 18px;
+        font-family: "Space Mono", monospace;
+        font-size: 14px;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        margin-left: 8px;
+        cursor: pointer;
+      }
+      .popup small {
+        display: block;
+        margin-top: 8px;
+        font-size: 13px;
+        color: #444;
+      }
+      .overlay {
+        position: fixed;
+        display: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p><strong>ENUID labs. We build what matters.</strong></p>
+
+      <p>
+        ENUID is a lab focused, independent space where intelligence is studied,
+        questioned, built, broken, and rebuilt until it’s actually useful. Our
+        mission isn’t to impress the world. It’s to change what’s possible.
+      </p>
+
+      <p>
+        We believe the next generation of intelligence shouldn’t be built by
+        accident.<br />
+        It should be built by intention slowly, deliberately, and with care.
+      </p>
+
+      <p>
+        Our first product:
+        <span class="highlight" onclick="togglePopup()">Fluid Orbit</span>. Not
+        a marketplace. Not a store, A “Shopping Engine” Just one search that
+        helps you find the products you actually need, across the entire
+        internet, E-Commerce marketplaces, niche stores run by companies and
+        individuals. Because online shopping today is a mess. Fake reviews. Ad’s
+        and Sponsored sites and products. Filters on filters. Fluid Orbit cuts
+        through all that and gives you real, trusted and quality results fast,
+        clean, and honest.
+      </p>
+
+      <p>
+        We’re not building for hype. We’re building for people. For trust. For
+        something better.
+      </p>
+
+      <p>
+        ENUID is a lab for intelligence that works not just performs.
+        Intelligence that thinks, adapts, and respects the humans using it.
+      </p>
+
+      <p>
+        We’re building something that should exist.<br />
+        We’re building it like it matters.
+      </p>
+    </div>
+
+    <!-- Overlay and Popup -->
+    <div class="overlay" id="overlay" onclick="togglePopup()"></div>
+
+    <div class="popup" id="popup">
+      <div class="logo">
+        <img src="IMG_4644.jpg" alt="Fluid Orbit Logo" />
+        <h1>Fluid Orbit</h1>
+      </div>
+      <h2>Shopping Engine!</h2>
+      <ul>
+        <li>There’s no homepage yet, because this isn’t a store.</li>
+        <li>It’s a “Shopping Engine” we’re building from scratch.</li>
+        <li>No ads, No sponsorships, No affiliates. No clones. No junk.</li>
+      </ul>
+      <p>If that sounds like something you’d want, hop on the wishlist.</p>
+      <input type="email" placeholder="Enter your Email" />
+      <button>Join wishlist</button>
+      <small>You’ll hear from us before anyone else does.</small>
+    </div>
+
+    <script>
+      function togglePopup() {
+        const popup = document.getElementById("popup");
+        const overlay = document.getElementById("overlay");
+        const isVisible = popup.style.display === "block";
+        popup.style.display = isVisible ? "none" : "block";
+        overlay.style.display = isVisible ? "none" : "block";
+      }
+    </script>
+  </body>
+</html>
