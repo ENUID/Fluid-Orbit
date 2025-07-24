@@ -4,11 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ENUID Labs</title>
+
+    <!-- Google Font for Body -->
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Load Space Age font -->
     <style>
+      @font-face {
+        font-family: "Space Age";
+        src: url("SpaceAge.ttf") format("truetype");
+      }
+
       body {
         font-family: "Space Mono", monospace;
         background: white;
@@ -17,23 +26,34 @@
         line-height: 1.6;
         font-size: 16px;
       }
+
       .logo {
-        display: none; /* Hidden from main page */
+        display: none;
       }
+
       .subtitle {
         font-size: 14px;
         color: #333;
         margin-top: -10px;
       }
+
       .container {
         max-width: 800px;
         margin: 0 auto;
       }
+
+      .enuid-title {
+        font-family: "Space Age", sans-serif;
+        font-size: 40px;
+        letter-spacing: 1px;
+      }
+
       .highlight {
         color: #007bff;
         font-weight: bold;
         cursor: pointer;
       }
+
       .popup {
         display: none;
         position: fixed;
@@ -49,27 +69,33 @@
         z-index: 1000;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
       }
+
       .popup .logo {
         display: block;
         text-align: left;
       }
+
       .popup .logo img {
         width: 60px;
         vertical-align: middle;
       }
+
       .popup h1 {
         display: inline-block;
         font-size: 28px;
         margin-left: 10px;
         vertical-align: middle;
       }
+
       .popup h2 {
         font-size: 26px;
         margin-top: 30px;
       }
+
       .popup ul {
         padding-left: 20px;
       }
+
       .popup input[type="email"] {
         padding: 12px;
         width: 60%;
@@ -79,6 +105,7 @@
         border-radius: 12px;
         margin-top: 10px;
       }
+
       .popup button {
         padding: 12px 18px;
         font-family: "Space Mono", monospace;
@@ -90,12 +117,14 @@
         margin-left: 8px;
         cursor: pointer;
       }
+
       .popup small {
         display: block;
         margin-top: 8px;
         font-size: 13px;
         color: #444;
       }
+
       .overlay {
         position: fixed;
         display: none;
@@ -110,7 +139,11 @@
   </head>
   <body>
     <div class="container">
-      <p><strong>ENUID labs. We build what matters.</strong></p>
+      <p>
+        <strong><span class="enuid-title">ENUID.</span></strong>
+      </p>
+
+      <p>We build what matters.</p>
 
       <p>
         ENUID is a lab focused, independent space where intelligence is studied,
@@ -152,7 +185,6 @@
       </p>
     </div>
 
-    <!-- Overlay and Popup -->
     <div class="overlay" id="overlay" onclick="togglePopup()"></div>
 
     <div class="popup" id="popup">
